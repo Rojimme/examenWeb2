@@ -1,0 +1,107 @@
+<div>
+  <div>
+    <div>
+      <h1 class="tituloPrincipal">Bienvenidos al área de control de choferes</h1>
+    </div>
+
+
+    <!-- Aquí empieza el proceso de ingreso -->
+    <form [formGroup]="choferForm.baseForm">
+      <div class="ingreso1">
+        <mat-form-field>
+          <mat-label>Número de cedula</mat-label>
+          <input matInput type="text" formControlName="cedula" />
+        </mat-form-field>
+      </div>
+
+      <div class="ingreso2">
+        <mat-form-field>
+          <mat-label>Nombre chofer</mat-label>
+          <input matInput type="text" formControlName="nombre" />
+        </mat-form-field>
+      </div>
+
+      <div class="ingreso3">
+        <mat-form-field>
+          <mat-label>Primer Apellido chofer</mat-label>
+          <input matInput type="text" formControlName="apellido1" />
+        </mat-form-field>
+      </div>
+
+      <div class="ingreso4">
+        <mat-form-field>
+          <mat-label>Segundo Apellido chofer</mat-label>
+          <input matInput type="text" formControlName="apellido2" />
+        </mat-form-field>
+      </div>
+
+      <div class="ingreso5">
+        <mat-form-field>
+          <mat-label>Fecha de Nacimiento chofer</mat-label>
+          <input matInput type="date" formControlName="fechaNac" />
+        </mat-form-field>
+      </div>
+    </form>
+  </div>
+
+  <!-- Aquí termina el proceso de ingresos -->
+
+  <button type="button" class="btn btn-info" (click)="abrirDialogLicencias()">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-circle"
+      viewBox="0 0 16 16">
+      <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+      <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
+    </svg>
+  </button>
+
+
+
+
+  <div>
+    <div>
+      <div>
+        <h1 class="licenciaTexto">Tipo Licencia</h1>
+      </div>
+
+      <table class="table">
+        <thead>
+          <tr>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let licencia of arrayLicencias">
+            <td>{{ licencia.licencia.nombre }}</td>
+            <td>
+              <button type="button" class="btn btn-danger" (click)="eliminarLicencia(licencia)">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="50" class="bi bi-trash3-fill"
+                  viewBox="0 0 16 16">
+                  <path
+                    d="M11 1.5v1h3.5a.5.5 0 0 1 0 1h-.538l-.853 10.66A2 2
+                     0 0 1 11.115 16h-6.23a2 2 0 0 1-1.994-1.84L2.038 3.5H1.5a.5.5 0 0 1 0-1H5v-1A1.5 
+                     1.5 0 0 1 6.5 0h3A1.5 1.5 0 0 1 11 1.5Zm-5 0v1h4v-1a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5ZM4.5 
+                     5.029l.5 8.5a.5.5 0 1 0 .998-.06l-.5-8.5a.5.5 0 1 0-.998.06Zm6.53-.528a.5.5 0 0 0-.528.47l-.5 8.5a.5.5 0 0 0 .998.058l.5-8.5a.5.5 0 0 0-.47-.528ZM8 4.5a.5.5 0 0 0-.5.5v8.5a.5.5 0 0 0 1 0V5a.5.5 0 0 0-.5-.5Z" />
+                </svg>
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- <div class="guardar-btn"> -->
+  <!-- <button type="button" class=" btn btn-info" (click)="guardarChofer()">
+      Guardar chofer
+    </button> -->
+
+  <!-- <div class="guardar-btn">
+    <button type="button" class="botonGuardar" mat-button (click)="guardarChofer()">GUARDAR CHOFER</button>
+  </div>
+</div> -->
+
+  <!-- fill="currentColor" -->
+
+  <div>
+    <button mat-raised-button class="botonGuardarultimo justify-content-center"
+      (click)="guardarChofer()">Matricular</button>
+  </div>

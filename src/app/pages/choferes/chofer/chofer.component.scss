@@ -1,0 +1,89 @@
+.tituloPrincipal{
+    background-color: #F2CAB3;
+    color: #A65005;
+    text-align: center;
+    
+
+}
+
+.licenciaTexto{
+    color: #A65005;
+    position: absolute;
+    top: 335px;
+    text-align: center;
+    top: 50%;
+    position: absolute;
+    right: 50vh;
+
+}
+
+.button{
+    background-color: #F2CAB3;
+}
+
+.ingreso1{
+
+    color: #A65005;
+    display: flex;
+    justify-content: center;
+
+}
+
+.ingreso2{
+    color: #A65005;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.ingreso3{
+    color: #A65005;
+    display: flex;
+    justify-content: center;
+}
+
+.ingreso4{
+    color: #A65005;
+    display: flex;
+    justify-content: center;
+}
+
+.ingreso5{
+    color: #A65005;
+    display: flex;
+    justify-content: center;
+}
+
+.table{
+    float: right;
+    margin-left: 20px;
+    background-color: #A65005;
+}
+
+.botonGuardarultimo{
+
+    color:  #ddd4cd !important;
+    background-color: #F24957 !important;
+    // ESTE righT DE ESTA MANERA FUNCIONA EXELENTE;
+    right: -90vh;
+    top: 20;
+ 
+   
+}
+
+.btn{
+    color:  #ddd4cd !important;
+    background-color: #F24957 !important;
+    text-align: center;
+    top: 50%;
+    position: absolute;
+    right: 70vh;
+
+}
+
+.botoMatriCaja{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    background-color: #A65005;
+}
